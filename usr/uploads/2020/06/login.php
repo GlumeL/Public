@@ -17,6 +17,22 @@ text-align: center;
      /*替换背景*/
     background-image: url(https://cdn.jsdelivr.net/gh/Catalpablog/handsome/img/XBG.webp); 
     background-position: center;
+    background-size: cover;
+}
+.btn {
+color: #000;
+    border-radius: 10px;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee, #fbc2eb);
+    background-size: 200%;
+    line-height: 0.5;
+}
+.btn:hover {
+  animation: btnAnimate 1s infinite;
+}
+@keyframes btnAnimate {
+  50% {
+    background-position: 200%;
+  }
 }
 </style>
 <!--手机不加载canvas-->
@@ -40,7 +56,7 @@ document.write('<script   src="https://cdn.jsdelivr.net/gh/Catalpablog/handsome/
                 <input type="password" id="password" name="password" class="text-l w-100" placeholder="<?php _e('密码'); ?>" />
             </p>
             <p class="submit">
-                <button type="submit" style="display: inline-block;background-color: #008eff;border: none;color: #ffffff;font-size: 25px;padding: 5px;width: 110px;border-radius: 10px;"><?php _e('登录'); ?></button>
+                <button type="submit" class="btn"><?php _e('登录'); ?></button>
                 <input type="hidden" name="referer" value="<?php echo htmlspecialchars($request->get('referer')); ?>" />
             </p>
               <div class="custom-control custom-control-alternative custom-checkbox">
