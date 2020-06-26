@@ -58,6 +58,10 @@ document.write('<script   src="https://cdn.jsdelivr.net/gh/Catalpablog/handsome/
                 <button type="submit" class="btn btn-l w-100 primary"><?php _e('登录'); ?></button>
                 <input type="hidden" name="referer" value="<?php echo htmlspecialchars($request->get('referer')); ?>" />
             </p>
+                </p>
+            <p>
+                <label for="remember"><input type="checkbox" name="remember" class="checkbox" value="1" id="remember" /> <?php _e('下次自动登录'); ?></label>
+            </p>
         </form>
         <p class="more-link" style="margin-top: 10px;">
             <a href="<?php $options->siteUrl(); ?>"><?php _e('返回首页'); ?></a>
